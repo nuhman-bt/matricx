@@ -48,6 +48,39 @@ Run without prompts (useful for scripts):
 npx matricx -y
 ```
 
+### Advanced CLI Options
+
+You can append CLI arguments to run advanced modes:
+
+```bash
+# Output system specs as raw JSON (useful for cron jobs/scripts)
+npx matricx --json
+
+# Override the default 1000ms dashboard polling interval
+npx matricx --interval 500
+
+# Open directly into a specific view
+npx matricx --net
+```
+
+---
+
+## 🛠️ Local Development
+
+To run the project locally from the repository:
+
+1. Clone the repository and navigate into it.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the dashboard:
+   ```bash
+   npm run dev
+   ```
+
+*Tip: You can also start specific views by using `npm run cpu`, `npm run net`, etc. Check out `package.json` for all available scripts!*
+
 <p align="center"> <img src="https://github.com/nuhmanpk/matricx/blob/main/assets/demo.png?raw=true" alt="Matricx Screenshot"/> </p>
 
 Made with ❤️ by [Nuhman](https://github.com/nuhmanpk). Happy Coding 🚀

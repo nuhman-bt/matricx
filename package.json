@@ -1,7 +1,7 @@
 {
   "name": "matricx",
-  "version": "0.1.1",
-  "description": "Matricx — full-width responsive TUI system metrics (CPU, memory, network, processes)",
+  "version": "0.2.0",
+  "description": "Matricx — next-level TUI system monitor with CPU/GPU/Network/Disk/Memory/Process views, sparklines and more",
   "type": "module",
   "bin": {
     "matricx": "./bin/matricx.js"
@@ -12,16 +12,35 @@
   "files": [
     "bin/"
   ],
-  "keywords": ["tui", "monitor", "metrics", "cli", "matricx"],
+  "keywords": [
+    "tui",
+    "monitor",
+    "metrics",
+    "cli",
+    "matricx",
+    "gpu",
+    "disk",
+    "sparkline"
+  ],
   "author": "Your Name <you@example.com>",
   "license": "MIT",
   "dependencies": {
     "blessed": "^0.1.0",
+    "blessed-contrib": "^0.4.10",
     "pretty-bytes": "^6.0.0",
     "systeminformation": "^5.12.0"
   },
   "scripts": {
     "start": "node ./bin/matricx.js",
+    "dev": "node ./bin/matricx.js",
+    "cpu": "node ./bin/matricx.js --cpu",
+    "gpu": "node ./bin/matricx.js --gpu",
+    "net": "node ./bin/matricx.js --net",
+    "disk": "node ./bin/matricx.js --disk",
+    "mem": "node ./bin/matricx.js --mem",
+    "proc": "node ./bin/matricx.js --proc",
+    "dash": "node ./bin/matricx.js --dash",
+    "sensors": "node ./bin/matricx.js --sensors",
     "test": "node --version"
   }
 }
